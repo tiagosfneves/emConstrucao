@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Global styles */
+html { scroll-behavior: smooth; }
+body { @apply min-h-screen bg-gradient-to-br from-indigo-950 via-violet-900 to-indigo-800 font-sans antialiased; }
+
+.container { @apply max-w-5xl; }
+
+.btn-primary { @apply inline-flex items-center justify-center gap-2 rounded-lg bg-primary-600 px-6 py-3 font-medium text-white shadow-glow transition-all duration-300 hover:scale-[1.03] hover:shadow-lg hover:brightness-110 focus:outline-none focus:ring-2 focus:ring-accent-500 focus:ring-offset-0; }
+
+.card { @apply rounded-2xl bg-white/5 backdrop-blur-md ring-1 ring-white/10 shadow-lg; }
+
+.section { @apply py-16 md:py-24; }
