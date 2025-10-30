@@ -4,11 +4,14 @@
       <h2 class="text-center text-2xl font-semibold">Entre em Contato</h2>
       <p class="mt-2 text-center text-white/70">Fale comigo sobre seu projeto 😄</p>
 
-      <form class="mt-6 grid gap-4" @submit.prevent="onSubmit">
+      <form class="mt-6 grid gap-4" @submit.prevent="onSubmit" action="https://api.web3forms.com/submit" method="POST">
+        <input type="hidden" name="access_key" value="ffad2959-4bf9-4783-948e-477c654cf2b5">
+
         <div>
           <label class="mb-1 block text-sm text-white/80" for="nome">Nome</label>
           <input
             id="nome"
+            name="name"
             v-model="form.name"
             type="text"
             placeholder="Seu nome"
@@ -19,6 +22,7 @@
           <label class="mb-1 block text-sm text-white/80" for="email">E-mail</label>
           <input
             id="email"
+            name="email"
             v-model="form.email"
             type="email"
             placeholder="voce@exemplo.com"
@@ -29,6 +33,7 @@
           <label class="mb-1 block text-sm text-white/80" for="mensagem">Mensagem</label>
           <textarea
             id="mensagem"
+            name="message"
             v-model="form.message"
             rows="5"
             placeholder="Conte um pouco sobre o que você precisa"
